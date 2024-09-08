@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/message.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-messaging.js"></script>
+    <script src="/push_messaging.js"></script>
+    <title>Main</title>
+</head>
+<body>
+    <div id="path" class="hidden"><%- class_id %></div>
+    <header class="header">
+        <nav class="GND">
+            <span class="left">
+                <a href="/classes" class="logo">checkyou.cf</a>
+            </span>
+            <span class="right">
+                <a href="/logout" class="btn">logout</a>
+                <span class="partition">|</span>
+                <a href="/classes/my/<%- class_id %>/profile" class="btn">profile</a>
+            </span>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="main">
+            <div class="class_nav_btn_list">
+                <a href="/classes/my/<%- class_id %>/schedule">schedule</a>
+                <a href="/classes/my/<%- class_id %>/notice">notice</a>
+                <a href="/classes/my/<%- class_id %>/message" class="fixed">message</a>
+            </div>
+            <div class="main_topmost">
+                <span class="left">
+                    Messages:
+                </span>
+                <span class="right">
+                    <span id="show_message_btn">send message</span>
+                    <div id="message_form_back" class="hidden">
+                        <span id="message_form">
+                            
+                            <div class="message_form_wrap">
+                                <select id="message_receiver">
+                                    <% for (let key in members) { %>
+                                        <% if (members[key] !== null) {%>
+                                            <option value="<%- key %>"><%- members[key].nickname %></option>
+                                        <% } %>
+                                    <% } %>
+                                </select>
+                                <label for="message_title" class="message_label">title : <input type="text" id="message_title" placeholder="3 ~ 20 letters"></label>
+                                <label for="message_body" class="message_label">body : </label><textarea id="message_body" cols="30" rows="10" placeholder="0 ~ 500 letters"></textarea>
+                                <button id="message_btn">send</button>
+                            </div>
+                        </span>
+                    </div>
+                </span>
+            </div>
+            <div id="message_list"></div>
+        </main>
+        <footer class="footer">
+        
+        </footer>
+        <script src="/scripts/message.js"></script>
+    </div>
+</body>
+</html>

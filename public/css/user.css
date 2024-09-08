@@ -1,0 +1,28 @@
+.push_right_checkbox {
+    margin: 20px 0;
+}
+
+.push_label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.user_name {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.user_email {
+    font-size: 15px;
+}
+
+.withdraw_btn {
+    margin-top: 50px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(216, 216, 216);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}

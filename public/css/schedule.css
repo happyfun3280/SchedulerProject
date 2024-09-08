@@ -1,0 +1,224 @@
+
+/* schedule */
+
+.scheduler_weekly {
+    margin-top: 10px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.scheduler_weekly > span {
+    height: 300px;
+    text-align: center;
+    background-color: rgb(248, 248, 248);
+}
+
+.month_move_btn_list {
+    width: 110px;
+    margin: 0 auto;
+    user-select: none;
+}
+
+#calendar_move_left {
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#calendar_move_right {
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.class_group {
+    margin-top: 10px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+.class_group > .left {
+    height: 600px;
+}
+
+.class_group > .right {
+    height: 600px;
+    background-color: rgb(220, 220, 220);
+}
+
+@media (max-width: 1000px) {
+    .class_group {
+        grid-template-columns: none;
+    }
+    .class_group > .left {
+        height: 500px;
+    }
+}
+
+#dayOfSchedules {
+}
+
+#calendar {
+    display: grid;
+    grid: 50px 2fr 2fr 2fr 2fr 2fr 2fr / repeat(7, 1fr);
+}
+
+.calendarDayOfWeek {
+    background-color: rgb(220, 220, 220) !important;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 14px;
+}
+
+#calendar > span {
+    background-color: rgb(247, 247, 247);
+    overflow: hidden;
+    word-break: break-all;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+#calendar > span:hover {
+    border: 1px solid black;
+}
+
+#calendar > span:active {
+    background-color: rgb(230, 230, 230);
+}
+
+#calendar > span::-webkit-scrollbar {
+    display: none;  
+}
+
+#calendar > span > .schedule_list.lot {
+    background-image: linear-gradient(transparent, rgb(255, 255, 255));
+}
+
+
+.calendarSunday {
+    color: red;
+}
+
+.calendarSaturday {
+    color: blue;
+}
+
+.day_numbering {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 0;
+    position: sticky;
+}
+
+.schedule {
+    display: block;
+    font-size: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    color: black;
+    padding: 10px;
+}
+
+.dayOfSchedules_date {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.schedule_delete_btn {
+    float: right;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    padding: 2px 5px 2px 5px;
+    cursor: pointer;
+}
+
+#schedule_add_btn {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    float: right;
+    margin-top: -10px;
+    margin-right: 10px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#schedule_form_back {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#schedule_form {
+    position: absolute;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    margin-left: -200px;
+    left: 50%;
+    top: 30%;
+}
+
+.schedule_form_wrap {
+    margin: 20px;
+}
+
+.schedule_label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+}
+
+#schedule_title {
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    height: 25px;
+    width: 80%;
+    margin-left: 10px;
+}
+
+#schedule_title::placeholder {
+    font-size: 15px;
+    color: rgb(200, 200, 200);
+}
+
+#schedule_btn {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    font-weight: normal;
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+.clicked {
+    border: 1px solid blue;
+}

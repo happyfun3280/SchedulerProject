@@ -1,0 +1,171 @@
+
+/* notice */
+#show_notice_btn {
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 2px 15px 2px 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#show_notice_btn:hover {
+    text-decoration: underline;
+}
+
+#notice_form_back, #notice_update_form_back {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#notice_form, #notice_update_form {
+    position: absolute;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    margin-left: -200px;
+    left: 50%;
+    top: 30%;
+}
+
+.notice_form_wrap {
+    margin: 20px;
+}
+
+.notice_label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+}
+
+#notice_title, #notice_update_title {
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    height: 25px;
+    width: 80%;
+    margin-left: 10px;
+}
+
+#notice_title::placeholder, #notice_update_title::placeholder {
+    font-size: 15px;
+    color: rgb(200, 200, 200);
+}
+
+#notice_body, #notice_update_body {
+    margin-top: 5px;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    height: 150px;
+    width: 95%;
+}
+
+#notice_body::placeholder, #notice_update_body::placeholder {
+    font-size: 15px;
+    color: rgb(200, 200, 200);
+}
+
+#notice_btn, #notice_update_btn {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    font-weight: normal;
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+    display: block;
+}
+
+.notice {
+    min-height: 40px;
+    background-color: rgb(220, 220, 220);
+    margin-top: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.notice.open {
+    display: block;
+}
+
+.notice > .title {
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.notice > .body {
+    font-size: 15px;
+    margin-top: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notice.open > .title {
+    display: block;
+    white-space: normal;
+    text-overflow:unset;
+    word-break: break-all;
+}
+
+.notice.open > .body {
+    display: block;
+    white-space: normal;
+    text-overflow:unset;
+    word-break: break-all;
+}
+
+.notice > .name {
+    margin-top: 12px;
+    display: inline-block;
+    color: rgb(120, 120, 120);
+    font-size: 12px;
+    text-align: right;
+}
+
+.notice > .name > .delete_btn {
+    display: inline-block;
+    margin-top: -3px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 5px;
+    background-color: rgb(255, 20, 20);
+    padding: 5px 10px 5px 10px;
+}
+
+.notice > .name > .update_btn {
+    display: inline-block;
+    margin-top: -3px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(80, 140, 220);
+    padding: 5px 10px 5px 10px;
+}
+
+#show_more_notice_btn {
+    height: 40px;
+    margin-top: 5px;
+    cursor: pointer;
+    background-color: rgb(220, 220, 220);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}

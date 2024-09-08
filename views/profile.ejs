@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-messaging.js"></script>
+    <title>Main</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="GND">
+            <span class="left">
+                <a href="/classes" class="logo">checkyou.cf</a>
+            </span>
+            <span class="right">
+                <a href="/logout" class="btn">logout</a>
+                <span class="partition">|</span>
+                <a href="/classes/my/<%- class_id %>/profile" class="btn">profile</a>
+            </span>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div id="path" class="hidden"><%- class_id %></div>
+        <main class="main">
+            <div class="profile">
+                <span class="left">
+                    <img src="/images/icons/user.png" alt="user" width="100px" height="100px">
+                    <span class="user_name"><%- user.name %></span>
+                    <span class="user_nickname"><%- info.nickname %></span>
+                </span>
+                <span class="right">
+                    <span class="user_email"><%- user.email %></span>
+                </span>
+            </div>
+            <a href="/classes/my/<%- class_id %>" class="back_btn">&lt; 클래스로 돌아가기</a>
+            <div class="push_permission_checkbox">
+                <span class="push_permission_checkbox">
+                    <input type="checkbox" id="push_permission">
+                    <label for="push_permission" class="push_label">알림 받기</label>
+                </span>
+            </div>
+            <div class="invite_code">클래스 초대 코드 : <%- invite_code %></div>
+            <form action="/classes/my/<%- class_id %>/profile/nickname" method="POST" class="nickname_form">
+                <input type="text" name="nickname" id="nickname_input" placeholder="new nickname">
+                <input type="submit" value="change" class="nickname_form_btn">
+            </form>
+            <button class="withdraw_btn">탈퇴하기</button>
+        </main>
+        <footer class="footer">
+        
+        </footer>
+    </div>
+    <script src="/scripts/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/notice.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-messaging.js"></script>
+    <script src="/push_messaging.js"></script>
+    <title>Main</title>
+</head>
+<body>
+    <div id="path" class="hidden"><%- class_id %></div>
+    <header class="header">
+        <nav class="GND">
+            <span class="left">
+                <a href="/classes" class="logo">checkyou.cf</a>
+            </span>
+            <span class="right">
+                <a href="/logout" class="btn">logout</a>
+                <span class="partition">|</span>
+                <a href="/classes/my/<%- class_id %>/profile" class="btn">profile</a>
+            </span>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="main">
+            <div class="class_nav_btn_list">
+                <a href="/classes/my/<%- class_id %>/schedule">schedule</a>
+                <a href="/classes/my/<%- class_id %>/notice" class="fixed">notice</a>
+                <a href="/classes/my/<%- class_id %>/message">message</a>
+            </div>
+            <div class="main_topmost">
+                <span class="left">
+                    Notices:
+                </span>
+                <span class="right">
+                    <span id="show_notice_btn">send notice</span>
+                    <div id="notice_form_back" class="hidden">
+                        <span id="notice_form">
+                            <div class="notice_form_wrap">
+                                <label for="notice_title" class="notice_label">title : <input type="text" id="notice_title" placeholder="3 ~ 20 letters"></label>
+                                <label for="notice_body" class="notice_label">body : </label><textarea id="notice_body" cols="30" rows="10" placeholder="0 ~ 500 letters"></textarea>
+                                <button id="notice_btn">create</button>
+                            </div>
+                        </span>
+                    </div>
+                </span>
+            </div>
+            <div id="notice_list"></div>
+            <div id="notice_update_form_back" class="hidden">
+                <span id="notice_update_form">
+                    <div class="notice_form_wrap">
+                        <label for="notice_title" class="notice_label">title : <input type="text" id="notice_update_title" placeholder="3 ~ 20 letters"></label>
+                        <label for="notice_body" class="notice_label">body : </label><textarea id="notice_update_body" cols="30" rows="10" placeholder="0 ~ 500 letters"></textarea>
+                        <button id="notice_update_btn">create</button>
+                    </div>
+                </span>
+            </div>
+        </main>
+        <footer class="footer">
+        
+        </footer>
+        <script src="/scripts/notice.js"></script>
+    </div>
+</body>
+</html>

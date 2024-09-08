@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/schedule.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-messaging.js"></script>
+    <script src="/push_messaging.js"></script>
+    <title>Main</title>
+</head>
+<body>
+    <div id="path" class="hidden"><%- class_id %></div>
+    <header class="header">
+        <nav class="GND">
+            <span class="left">
+                <a href="/classes" class="logo">checkyou.cf</a>
+            </span>
+            <span class="right">
+                <a href="/logout" class="btn">logout</a>
+                <span class="partition">|</span>
+                <a href="/classes/my/<%- class_id %>/profile" class="btn">profile</a>
+            </span>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="main">
+            <div class="class_nav_btn_list">
+                <a href="/classes/my/<%- class_id %>/schedule" class="fixed">schedule</a>
+                <a href="/classes/my/<%- class_id %>/notice">notice</a>
+                <a href="/classes/my/<%- class_id %>/message">message</a>
+            </div>
+            <div class="month_move_btn_list">
+                <span id="calendar_move_left">&lt</span>
+                <span id="current_date"></span>
+                <span id="calendar_move_right">&gt</span>
+            </div>
+            <div class="class_group">
+                <div id="calendar" class="left"></div>
+                <div class="right">
+                    <div id="dayOfSchedules"></div>
+                    <div id="schedule_form_back" class="hidden">
+                        <span id="schedule_form">
+                            <div class="schedule_form_wrap">
+                                <label for="schedule_title" class="schedule_label">title : <input type="text" id="schedule_title" placeholder="3 ~ 20 letters"></label>
+                                <button id="schedule_btn">create</button>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+        
+        </footer>
+        <script src="/scripts/schedule.js"></script>
+    </div>
+</body>
+</html>

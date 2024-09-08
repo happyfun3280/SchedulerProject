@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/* default */
+
+.header {
+    box-shadow: 0 0 5px;
+    height: 60px;
+    width: 100%;
+}
+
+.GND {
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    height: 60px;
+    user-select: none;
+}
+
+.GND > .left {
+    float: left;
+    margin-top: 20px;
+}
+
+.GND > .left > .logo {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.GND > .right {
+    float: right;
+    margin-top: 20px;
+}
+
+.GND > .right > .btn {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.GND > .right > .btn:hover {
+    text-decoration: underline;
+}
+
+.GND > .right > .partition {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0px 10px 0 10px;
+}
+
+/* default */
+.container {
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .main {
+        margin: 0 20px 0 20px;
+    }
+    .GND {
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .GND > .left {
+        margin-left: 20px;
+    }
+    .GND > .right {
+        margin-right: 20px;
+    }
+}
+
+/* default */
+
+.main {
+    min-height: 1000px;
+    margin-top: 40px;
+    display: block;
+    height: 100%;
+}
+
+.profile {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.profile > .left {
+    position: absolute;
+    left: 0;
+}
+
+.profile > .right {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    height: 100%;
+    right: 0;
+}
+
+#push_right_alert {
+    color: red;
+}
+
+/* class */
+
+.main_topmost {
+    height: 50px;
+}
+
+.main_topmost > .left {
+    float: left;
+    margin-top: 20px;
+}
+
+.main_topmost > .right {
+    float: right;
+    margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+    .main_topmost > .left {
+        margin-left: 15px;
+    }
+    .main_topmost > .right {
+        margin-right: 15px;
+    }
+}
+
+.class_nav_btn_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 40px;
+    user-select: none;
+}
+
+.class_nav_btn_list > a {
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.class_nav_btn_list > a:hover {
+    text-decoration: underline;
+}
+
+.class_nav_btn_list > .fixed {
+    background-color: rgb(220, 220, 220);
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* default */
+
+.footer {
+    margin-top: 20px;
+    border-top: 2px solid black;
+    height: 100px;
+    display: block;
+}

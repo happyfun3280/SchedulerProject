@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/joinClass.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-messaging.js"></script>
+    <script src="/push_messaging.js"></script>
+    <title>Main</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="GND">
+            <span class="left">
+                <a href="/classes" class="logo">checkyou.cf</a>
+            </span>
+            <span class="right">
+                <a href="/logout" class="btn">logout</a>
+                <span class="partition">|</span>
+                <a href="/user" class="btn"><%- user.name %></a>
+            </span>
+        </nav>
+    </header>
+    
+        <div class="container">
+        <main class="main">
+            <form action="/classes/join" method="POST" class="class_new_form">
+                <div class="form_wrap">
+                    <div class="form_title">클래스 가입</div>
+                    <div>
+                        <input type="text" name="code" id="code" placeholder="invite code">
+                    </div>
+                    <div>
+                        <input type="text" name="class_nickname" id="class_nickname" placeholder="your class nickname">
+                    </div>
+                    <input type="submit" value="join" class="class_btn">
+                </div>
+            </form>
+        </main>
+        <footer class="footer">
+        
+        </footer>
+    </div>
+</body>
+</html>

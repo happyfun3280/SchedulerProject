@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-messaging.js"></script>
+    <title>Main</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="GND">
+            <span class="left">
+                <a href="/classes" class="logo">checkyou.cf</a>
+            </span>
+            <span class="right">
+                <a href="/logout" class="btn">logout</a>
+                <span class="partition">|</span>
+                <a href="/user" class="btn"><%- user.name %></a>
+            </span>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <main class="main">
+            <div class="profile">
+                <span class="left">
+                    <img src="/images/icons/user.png" alt="user" width="100px" height="100px">
+                    <span class="user_name"><%= user.name %></span>
+                </span>
+                <span class="right">
+                    <span class="user_email"><%= user.email %></span>
+                </span>
+            </div>
+            <div class="push_right_checkbox">
+                <span>
+                    <input type="checkbox" id="push_right" name="push_right">
+                    <label for="push_right" class="push_label">알림 받기</label>
+                    <span id="push_right_alert"></span>
+                </span>
+            </div>
+            <button class="withdraw_btn">탈퇴하기</button>
+        </main>
+        <footer class="footer">
+        
+        </footer>
+    </div>
+    <script src="/scripts/user.js"></script>
+</body>
+</html>
